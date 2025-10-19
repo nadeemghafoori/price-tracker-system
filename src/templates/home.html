@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block content %}
+    <div class="jumbotron">
+        <h1>Price Tracker</h1>
+        <p>We scan online web stores to alert you of price drops in items that interest you.</p>
+        <p>Just sign up, and get started by adding the URL of an item that you wish to track. We'll do the rest!</p>
+        {% if session['email'] %}
+            <p><a class="btn btn-primary btn-lg" href="{{ url_for('users.user_alerts') }}" role="button">Your Alerts</a> </p>
+        {% else %}
+            <p><a class="btn btn-primary btn-lg" href="{{ url_for('users.register_user') }}" role="button">Get Started</a> </p>
+        {% endif %}
+    </div>
+{% endblock %}
