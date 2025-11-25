@@ -8,7 +8,7 @@ class Database(object):
     @staticmethod
     def initialize():
         client = pymongo.MongoClient(Database.URI)          #client has access to all databases
-        Database.DATABASE = client['FinalProject']
+        Database.DATABASE = client['PriceTrackerSystem']
 
     @staticmethod
     def insert(collection, data):
